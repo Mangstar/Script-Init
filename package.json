@@ -1,0 +1,45 @@
+{
+  "name": "scripts_init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "ie": "11",
+            "edge": "17",
+            "firefox": "60",
+            "chrome": "52",
+            "safari": "11.1"
+          }
+        }
+      ]
+    ],
+    "plugins": [],
+    "minified": true,
+    "comments": false,
+    "ignore": [
+      "src/js/libraries/"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.4.4",
+    "babel-minify": "^0.5.0",
+    "jest": "^24.8.0"
+  },
+  "scripts": {
+    "start": "babel src -d dist",
+    "build-min": "babel src -d dist",
+    "watch": "babel src -d dist -w",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Mikeee",
+  "license": "ISC"
+}
